@@ -1,0 +1,47 @@
+header h1 {
+  font-size: 20px;
+  background-color: #23889a;
+  text-align: center;
+  color: white;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+header h1.login {
+  font-size: 20px;
+  background-color: #000080;
+  text-align: center;
+  color: white;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.form {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 500px;
+}
+.form .form-item .form-control {
+  border: 1px solid #939393;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+.form .btn {
+  border-radius: 5px;
+  background-color: white;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #939393;
+}
+
+/*# sourceMappingURL=form.css.map */
