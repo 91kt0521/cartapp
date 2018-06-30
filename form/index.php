@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>カートapi</title>
-        <link rel="stylesheet" href="/cart_api/css/form.css">
-        <link rel="stylesheet" href="/cart_api/css/base.css">
+        <link rel="stylesheet" href="/cart_app/css/form.css">
+        <link rel="stylesheet" href="/cart_app/css/base.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <script>
@@ -31,7 +31,7 @@
                 <div class="form-tel form-item">
                     <input type="text" id="password" name="password" autocomplete="password" class="form-control" placeholder="パスワード" />
                 </div>
-                <input id="try" type="submit" value="登録" class="btn">
+                <input id="try" type="submit" name="login" value="登録" class="btn">
             </form>
         </div>
     </body>
