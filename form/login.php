@@ -12,8 +12,7 @@
 
     $errorMessage = "";
 
-    if(isset($_POST["login"])){
-
+    if(isset($_POST["mail"]) && isset($_POST["password"])){
 
         $host = 'localhost';
         $dbname = 'cartapp';
@@ -62,7 +61,7 @@
                         }
                         $_SESSION["id"] = $row['id'];
 
-                        header("Location: cart.php");  // メイン画面へ遷移
+                        header("Location: Category.php");  // メイン画面へ遷移
                         exit();
 
                     } else {
@@ -78,24 +77,16 @@
                 die();
             }
         }
-    } else {
-        if(!empty($_POST["login"])){
-            require_once("insert.php");
-        }
-    }
+    } 
 
 ?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>カートapi</title>
+        <title>ログイン</title>
         <link rel="stylesheet" href="/cart_app/css/form.css">
         <link rel="stylesheet" href="/cart_app/css/base.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <script>
-        </script>
     </head>
     <body>
         <header>

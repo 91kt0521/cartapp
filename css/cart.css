@@ -1,0 +1,65 @@
+header h1.login {
+	font-size: 20px;
+	background-color: #000080;
+	text-align: center;
+	color: white;
+	width: 80%;
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+header h2.sub {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.main {
+	text-align: center;
+	margin: 15px auto;
+	font-size: 20px;
+}
+
+.form-name.form-item {
+	text-align: center;
+	margin: 10px auto;
+}
+
+.btn {
+	font-size: 30px;
+	color: #000080;
+}
+
+.list {
+	margin: 10px auto;
+}
+
+.product_list {
+	font-size: 20px;
+	background-color: #99CCFF;
+	text-align: center;
+	color: white;
+	width: 80%;
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.list_table {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.cart_in {
+	font-size: 20px;
+	background-color: #00FF00;
+	text-align: center;
+	color: white;
+	width: 80%;
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-top: 10px;
+}

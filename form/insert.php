@@ -14,7 +14,7 @@
 	try {
 		// db接続
 		$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8",$dbuser, $dbpassword);
-		echo "SUCCESS";
+		// echo "SUCCESS";
 
 		// sqlへinsertする
 		$stmt = $pdo -> prepare("INSERT INTO users (

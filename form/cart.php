@@ -1,37 +1,37 @@
 <?php
-	// ログインしていなければlogin.phpに遷移
-	require_once __DIR__ . '/functions.php';
-	require_logined_session();
-	//echo $_SESSION["id"];
+    //セッションを開始
+    session_start();
+
+    // セッションのセット判定
+    if(!isset($_SESSION["product"])){
+        //セッション変数が未定義の場合
+        echo "現在カートは空です<br>";
+    } else {
+        echo "現在のカートの状況<br>";
+        //セッション変数のデータを読み込み
+        //商品名データを配列に代入
+ 
+        // カートidを文字列の配列にする
+        // $sessionId = explode(",", $_SESSION["product"]);
+        echo $_SESSION["product"];
+    }
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>カートapi</title>
-        <link rel="stylesheet" href="/cart_app/css/form.css">
+        <title>カート</title>
+        <link rel="stylesheet" href="/cart_app/css/cart.css">
         <link rel="stylesheet" href="/cart_app/css/base.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <script>
-        </script>
     </head>
     <body>
         <header>
-            <h1 class="login">カテゴリ一覧</h1>
+            <h1 class="cart_in">ショッピングカート</h1>
+            <h2 class="sub">一覧</h2>
         </header>
-        <div>
-        	<a href="list.php?id=1">食品</a>
+        <div class="main">
+         
         </div>
-        <div>
-        	<a href="list.php?id=2">日用品</a>
-        </div>
-        <form action="login.php" method="post">
-            <div class="form-name form-item">
-
-                <input id="try" type="submit" name="logout" value="ログアウト" class="btn">
-            </div>
-        </form>
     </body>
 </html>
