@@ -6,7 +6,7 @@
 function require_unlogined_session()
 {
     // セッション開始
-    //@session_start();
+    @session_start();
 
     if (isset($_SESSION['id'])) {
         header('Location: cart.php');
@@ -48,6 +48,20 @@ function products_list($stmt)
     }catch(PDOException $e){
         var_dump($e -> getMessage());
         die();
+    }
+}
+
+/**
+ * type_id判定
+ */
+function type_id_judge($a) {
+    // type_id判定
+    if(!isset($a) || $a == ""){
+        header("Location: category.php");  // メイン画面へ遷移
+        exit();
+    } else {
+        $total = 0;
+        return $total;
     }
 }
 

@@ -1,8 +1,37 @@
 <?php
-	// ログインしていなければlogin.phpに遷移
-	require_once __DIR__ . '/functions.php';
-	require_logined_session();
-	//echo $_SESSION["id"];
+    // セッションスタート
+    session_start();
+
+    // ログインしていなければlogin.phpに遷移
+    require_once __DIR__ . '/functions.php';
+    require_once __DIR__ . '/datas.php';
+
+    if(!isset($_GET["user"])){
+        header("Location: login.php");
+        exit();
+    } else{
+        $users_id = $_GET["user"];
+    }
+    require_logined_session();
+    $datas = Connection_info();
+
+    try{
+        // db接続
+        $pdo = new PDO("mysql:host={$datas["host"]};dbname={$datas["dbname"]};charset=utf8",$datas["dbuser"], $datas["dbpassword"]);
+
+        $sql = "SELECT * FROM users WHERE id = $users_id";
+        $stmt = $pdo->query($sql);
+
+        foreach ($stmt as $users_info) {
+            $_SESSION["user_id"] = $users_info["id"];
+            echo $_SESSION["user_id"];
+        }
+
+    }catch(PDOException $e){
+        var_dump($e -> getMessage());
+        die();
+    }
+
 ?>
 
 <!DOCTYPE html>

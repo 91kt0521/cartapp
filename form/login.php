@@ -7,6 +7,13 @@
         unset( $_SESSION["id"] );
     }
 
+    if(isset($_POST["logout"])){
+        echo "ログアウトしました";
+        //$_SESSION = array();
+        // セッションを破壊する
+        session_destroy();
+    }
+
     // ログインしていればcart.phpに遷移
     require_unlogined_session();
 
@@ -60,8 +67,10 @@
                             $row['id'];
                         }
                         $_SESSION["id"] = $row['id'];
-
-                        header("Location: Category.php");  // メイン画面へ遷移
+                        $url = "Category.php?user=".$_SESSION["id"];
+                        // メイン画面へ遷移
+                        //header("Location: Category.php");
+                        header("Location: $url");
                         exit();
 
                     } else {

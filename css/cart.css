@@ -13,6 +13,7 @@ header h1.login {
 header h2.sub {
 	text-align: center;
 	margin: 15px auto;
+	font-size: 25px;
 }
 
 .main {
@@ -62,4 +63,19 @@ header h2.sub {
 	margin: 0 auto;
 	border-radius: 5px;
 	margin-top: 10px;
+}
+
+header h2.sub1 {
+	text-align: center;
+	margin: 15px auto;
+	font-size: 20px;
+}
+
+.cart_in_list {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.aaa {
+	text-align: center;
 }
