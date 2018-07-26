@@ -8,7 +8,6 @@
     }
 
     if(isset($_POST["logout"])){
-        echo "ログアウトしました";
         //$_SESSION = array();
         // セッションを破壊する
         session_destroy();
